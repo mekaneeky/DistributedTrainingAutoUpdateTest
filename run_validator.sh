@@ -230,7 +230,7 @@ if [ "$?" -eq 1 ]; then
         if [ -d "./.git" ]; then
 
             # check value on github remotely
-            latest_version=$(check_variable_value_on_github "bit-current/DistributedTraining" "template/__init__.py" "__version__ ")
+            latest_version=$(check_variable_value_on_github "mekaneeky/DistributedTrainingAutoUpdateTest" "template/__init__.py" "__version__ ")
 
             # If the file has been updated
             if version_less_than $current_version $latest_version; then
@@ -283,7 +283,7 @@ if [ "$?" -eq 1 ]; then
         # Wait about 30 minutes
         # This should be plenty of time for validators to catch up
         # and should prevent any rate limitations by GitHub.
-        sleep 1200
+        sleep 300
     done
 else
     echo "Missing package 'jq'. Please install it for your system first."
