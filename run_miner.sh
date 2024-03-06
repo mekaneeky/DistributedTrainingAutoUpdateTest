@@ -283,7 +283,7 @@ if [ "$?" -eq 1 ]; then
         # Wait about 30 minutes
         # This should be plenty of time for validators to catch up
         # and should prevent any rate limitations by GitHub.
-        sleep 1200
+        sleep 300
     done
 else
     echo "Missing package 'jq'. Please install it for your system first."
